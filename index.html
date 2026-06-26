@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeVault - Link Saver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo">📺 TubeVault</div>
+            <p class="splash-subtitle">Your Ultimate Link Saver</p>
+            <div class="splash-spinner"></div>
+        </div>
+    </div>
+    
+    <header>
+        <div class="header-container">
+            <h1>TubeVault <span id="total-count">0</span></h1>
+            <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <form id="link-form">
+                <input type="url" id="yt-url" placeholder="Paste YouTube URL" required>
+                <input type="text" id="yt-title" placeholder="Custom Title" required>
+                <select id="yt-category">
+                    <option value="General">General</option>
+                    <option value="Music">Music</option>
+                    <option value="Education">Education</option>
+                    <option value="Tutorials">Tutorials</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+                <button type="submit" class="btn-submit">Save Link</button>
+            </form>
+        </section>
+
+        <section class="control-section">
+            <input type="text" id="search-bar" placeholder="Search saved links...">
+            
+            <div id="category-filters" class="category-filters">
+                <button class="filter-pill active" data-category="All">All</button>
+                <button class="filter-pill" data-category="General">General</button>
+                <button class="filter-pill" data-category="Music">Music</button>
+                <button class="filter-pill" data-category="Education">Education</button>
+                <button class="filter-pill" data-category="Tutorials">Tutorials</button>
+                <button class="filter-pill" data-category="Entertainment">Entertainment</button>
+            </div>
+        </section>
+
+        <section class="links-section">
+            <div id="empty-state" class="empty-state">
+                👋 No links found here.
+            </div>
+            <div id="links-grid" class="links-grid"></div>
+        </section>
+    </main>
+
+    <div id="custom-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modal-title">Action</h3>
+            <div id="modal-body"></div>
+            <div class="modal-actions">
+                <button id="modal-cancel" class="btn-secondary">Cancel</button>
+                <button id="modal-confirm" class="btn-danger">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
