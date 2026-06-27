@@ -379,3 +379,50 @@ input:focus, select:focus {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* --- Header Layout & Link Downloader Button --- */
+.header-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Title மற்றும் Button இடையேயான இடைவெளி */
+}
+
+
+
+.nav-downloader-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: #ffffff;
+    
+    
+    .nav-downloader-btn {
+      background-color: var(--bg-secondary);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+    box-shadow: var(--card-shadow);
+    }
+}
+
+/* மொபைல் ஸ்கிரீன் மிகச் சிறியதாக இருந்தால் எழுத்தின் அளவை சுருக்க */
+@media (max-width: 360px) {
+    .nav-downloader-btn {
+        font-size: 0.17rem;
+        padding: 5px 8px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+} 
