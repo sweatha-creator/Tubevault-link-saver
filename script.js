@@ -124,7 +124,7 @@ function renderLinks() {
                 <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="card-title">${escapeHTML(link.title)}</a>
                 <div class="card-actions">
                     <button class="action-btn" onclick="togglePin('${link.id}')" title="Pin Link">${link.pinned ? '📌' : '📍'}</button>
-                    <button class="action-btn" onclick="promptRename('${link.id}')" title="Rename">✏️</button>
+                    <button class="action-btn" onclick="promptRename('${link.id}')" title="Rename">✍️</button>
                     <button class="action-btn" onclick="promptDelete('${link.id}')" title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
 width="24" height="24"
 viewBox="0 0 24 24"
