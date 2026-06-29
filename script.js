@@ -104,7 +104,7 @@ function renderLinks() {
         linksGrid.innerHTML = '';
         emptyState.classList.remove('hidden');
         if(searchQuery || activeCategory !== 'All') {
-            emptyState.textContent = "🔍 Match ஆகும் லிங்க்குகள் எதுவும் இல்லை!";
+            emptyState.textContent = "🔍 No matching links!";
         } else {
             emptyState.textContent = "👋 No links saved yet. Start adding your favorite YouTube videos!";
         }
